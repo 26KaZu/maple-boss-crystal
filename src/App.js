@@ -28,8 +28,6 @@ const App = () => {
     fetchUserDoc();
   }, [user]);
 
-  console.log(userDoc);
-
   return (
     <div className="App">
       {/* <Header user={user} /> */}

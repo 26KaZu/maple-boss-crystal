@@ -30,6 +30,9 @@ const db = getFirestore(app);
 
 const obtainUserDoc = (user) => doc(db, "users", user?.uid);
 
+const obtainCharacterDoc = (user) =>
+  doc(db, `users/${user?.uid}/characters`, "info");
+
 const obtainDoc = (collection, document) => {
   const docRef = doc(db, collection, document);
   const docSnap = getDoc(docRef);
@@ -62,6 +65,7 @@ const registerWithEmail = async (email, password, name) => {
       email: email,
       characters: [],
     });
+    await setDoc(doc(db, `users/${user?.uid}/characters`, "characters"), {});
   } catch (err) {
     console.error(err);
     alert(err.message);
@@ -84,6 +88,7 @@ export {
   resetPassword,
   logout,
   obtainUserDoc,
+  obtainCharacterDoc,
   obtainDoc,
   putDoc,
 };

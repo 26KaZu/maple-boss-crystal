@@ -1,5 +1,7 @@
 .char-navbar {
-  height: fit-content;
+  /* height: fit-content; */
+  background-color: #c9d6df;
+  color: #1e2022;
 }
 
 .nav-title-section {
@@ -11,7 +13,14 @@
 .nav-user-section {
   padding-top: 30px;
   padding-bottom: 30px;
+  /* border-bottom: 2px solid rgba(128, 128, 128, 0.3); */
+}
+
+.nav-overview-section {
+  padding: 10px;
+  border-top: 2px solid rgba(128, 128, 128, 0.3);
   border-bottom: 2px solid rgba(128, 128, 128, 0.3);
+  cursor: pointer;
 }
 
 .nav-characters-section {
@@ -21,27 +30,78 @@
 
 .char-navbar-btn {
   margin-top: 10px;
-  background-color: #ffc4c4;
+  background-color: #52616b;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: none;
-  color: #850e35;
+  color: #c9d6df;
   font-weight: 700;
   border-radius: 50px;
 }
 
 .char-navbar-btn:hover {
   margin-top: 10px;
-  background-color: #ffc4c4;
+  background-color: #52616b;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: none;
-  color: #850e35;
+  color: #c9d6df;
   font-weight: 700;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.nav-chars-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mantine-NavLink-description {
+  text-align: center;
+  font-size: 14px;
+  color: #1e2022;
+  /* font-weight: 300; */
+}
+
+.nav-char-btn {
+  /* background-color: transparent !important; */
+  /* padding: 5px; */
+  border-radius: 5px;
+}
+
+/* .nav-char-btn:hover {
+  background-color: transparent !important;
+  padding-bottom: 10px;
+  padding-top: 0px;
+} */
+
+/* .mantine-NavLink-description:hover {
+  text-align: center;
+  font-size: 12px;
+  color: #1e2022;
+  background-color: transparent !important;
+  font-weight: bold;
+} */
+
+.nav-chars-list:hover {
+  font-weight: bold;
+}
+
+#add-char-input {
+  margin: auto;
+  width: 95%;
+  margin-top: 10px;
+}
+
+.add-char-btn {
+  margin: 5px;
+  margin-top: 20px;
+  font-size: 12px;
 }
